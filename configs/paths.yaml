@@ -1,0 +1,11 @@
+data:
+  raw: "data/raw/Telco-Customer-Churn.csv"
+  processed: "data/processed/churn_processed.csv"
+
+artifacts:
+  models: "artifacts/models/"
+  reports: "artifacts/reports/"
+  figures: "artifacts/figures/"
+
+dashboard:
+  app: "dashboard/app.py"
