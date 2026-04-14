@@ -239,10 +239,6 @@ def print_report(report: Dict[str, Any]) -> None:
  
 # ── Run directly to see the report ──
 if __name__ == "__main__":
-    import sys
-    import os
-    sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
-    
     from src.ingestion.load_data import load_raw_data
  
     df = load_raw_data()
