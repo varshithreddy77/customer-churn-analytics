@@ -3,14 +3,11 @@
 ## Problem Statement
 
 A telecom company is losing customers (churn). Each lost customer represents
-significant revenue loss — acquiring a replacement costs ~6x more than retaining
-the existing customer. The business needs a system that identifies customers
-likely to churn **before** they leave, so the retention team can intervene.
+significant revenue loss — acquiring a replacement costs ~6x more than retaining the existing customer. The business needs a system that identifies customers likely to churn **before** they leave, so the retention team can intervene.
 
 ## Business Objective
 
-Reduce revenue loss from churn by identifying high-risk customers early and
-targeting them with cost-effective retention offers.
+Reduce revenue loss from churn by identifying high-risk customers early and targeting them with cost-effective retention offers.
 
 ## Target Users
 

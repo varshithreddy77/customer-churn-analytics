@@ -1,0 +1,5 @@
+{
+  "best_by_roc_auc": "Random Forest",
+  "best_by_business_cost": "Logistic Regression",
+  "model_file": "random_forest.joblib"
+}

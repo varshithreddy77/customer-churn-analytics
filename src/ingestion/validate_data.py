@@ -51,12 +51,14 @@ def validate_schema(df: pd.DataFrame) ->  Dict[str, Any]:
         result['passed'] = False
         result['issues'].append(f"Missing columns: {missing}")
 
-    # Check data types
+    # Check data types (newer pandas reports text columns as "str" instead of "object")
+    EQUIVALENT = {"object": {"object", "str"}, "str": {"object", "str"}}
+
     type_mistakes = {}
     for col, expected_type in EXPECTED_SCHEMA.items():
         if col in df.columns:
             actual = str(df[col].dtype)
-            if actual != expected_type:
+            if actual not in EQUIVALENT.get(expected_type, {expected_type}):
                 type_mistakes[col] = {"expected": expected_type, "actual": actual}
 
     if type_mistakes:
@@ -240,8 +242,9 @@ def print_report(report: Dict[str, Any]) -> None:
 # ── Run directly to see the report ──
 if __name__ == "__main__":
     from src.ingestion.load_data import load_raw_data
- 
-    df = load_raw_data()
+    from src.features.build_features import clean_data
+
+    df = clean_data(load_raw_data())
     report = validate(df)
     print_report(report)
 
