@@ -1,0 +1,11 @@
+{
+  "model": "Logistic Regression",
+  "tuned_threshold": 0.25,
+  "analytic_threshold": 0.1068,
+  "assumed_success_rate": 0.3,
+  "clv": 1560,
+  "offer_cost": 50,
+  "recall_at_tuned": 0.9516,
+  "precision_at_tuned": 0.4111,
+  "net_benefit_at_tuned": 122622
+}
